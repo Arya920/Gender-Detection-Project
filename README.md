@@ -49,7 +49,7 @@ Given these results, the second model was selected for the final implementation.
 - download the model & keep it in your working Directory
 - [Gender Detection Model by rizvandwiki](https://huggingface.co/rizvandwiki/gender-classification-2)
 
-How to Use the Fine-tuned model
+### How to Use the Fine-tuned model
 
 ```bash
 from transformers import AutoFeatureExtractor, AutoModelForImageClassification
@@ -62,12 +62,11 @@ inputs = extractor(images = train_images[image_name], return_tensors="pt" )
         predicted_label = logits.argmax(-1).item()
         label = model.config.id2label[predicted_label]
 
-
-### How to Use
+```
+### How to clone the repository
 
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/your_username/your_project.git
-   cd your_project 
-
-
+   cd your_project
+   ```
