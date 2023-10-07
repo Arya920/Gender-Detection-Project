@@ -4,6 +4,8 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # Loading the Gender detection model. Check 'Binary_Image_Classification_Lab3_Part2.ipynb'
+# For Storage issue I have not uploaded the model file, but you can find the model link in the README file.
+# Download the model from readme and keep it in your directory.
 gender_model = load_model('1st_model.h5')  
 
 # Using OpenCV's Pre trained moddel "haarcascade" for detecting Front Face.
