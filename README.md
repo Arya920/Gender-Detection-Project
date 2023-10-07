@@ -1,4 +1,4 @@
-# Gender Classification using CNNs
+# Gender Classification using CNN & openCV
 
 This project focuses on classifying the gender of individuals from facial images. It employs a combination of techniques including transfer learning, fine-tuning, and custom CNN models.
 
@@ -11,6 +11,9 @@ This project focuses on classifying the gender of individuals from facial images
 2. **Fine-tuned Model from Hugging Face (rizvandwiki)**
    - Improved performance using a pre-trained model specifically designed for gender detection.
    - Provided a good balance of accuracy and speed.
+
+3. **Face Detection with OpenCV**
+   - Utilized OpenCV's in-built [harcascade model](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html) for face detection.
 
 ## Selected Model
 
@@ -37,6 +40,17 @@ Given these results, the second model was selected for the final implementation.
 
 ![Accuracy Graph](pictures/best_model_accuracy.png)
 
+
+### Model Performance 
+|--------------------------------------------------------------|
+| Model                       | Train Accuracy | Test Accuracy |
+|-----------------------------|----------------|---------------|
+| Fine-tuned VGG16            | 61%            | 55%           |
+| rizvandwiki's Model         | -              | -             |
+| Custom CNN Model 1          | 86%            | 85%           |
+| Custom CNN Model 2          | 90%            | 89%           |
+| Custom CNN Model 3          | 85%            | 83%           |
+|--------------------------------------------------------------|
 ## Application Setup
 
 ### Download the Best fitted model ~
@@ -46,11 +60,16 @@ Given these results, the second model was selected for the final implementation.
 ### Requirements
 - Python 3.x
 - OpenCV
+- Tensorflow >=2.4
+- Transformers
+- ThreadPoolExecutor
+- keras.applications 
 - download the model & keep it in your working Directory
 - [Gender Detection Model by rizvandwiki](https://huggingface.co/rizvandwiki/gender-classification-2)
 
-### How to Use the Fine-tuned model
 
+
+### How to Use the Fine-tuned model
 ```bash
 from transformers import AutoFeatureExtractor, AutoModelForImageClassification
 
@@ -63,10 +82,24 @@ inputs = extractor(images = train_images[image_name], return_tensors="pt" )
         label = model.config.id2label[predicted_label]
 
 ```
-### How to clone the repository
+### How to clone the repository & run the file
 
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/your_username/your_project.git
    cd your_project
    ```
+2. **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. **Run the main file**
+    ```bash
+    python gender_detection_app.py
+    ```
+
+### NOTE:
+This Project was a part of a College Assignment (Partial). For any inquiry please feel free to concat me or you can raise an issue in the GitHub issue section.
+
+[MY LINKEDIN](https://www.linkedin.com/in/arya-chakraborty2002/)
+[MY MAIL ID](aryachakraborty.official@gmail.com)
