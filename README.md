@@ -42,7 +42,8 @@ Given these results, the second model was selected for the final implementation.
 
 
 ### Model Performance 
-|--------------------------------------------------------------|
+
+
 | Model                       | Train Accuracy | Test Accuracy |
 |-----------------------------|----------------|---------------|
 | Fine-tuned VGG16            | 61%            | 55%           |
@@ -50,7 +51,6 @@ Given these results, the second model was selected for the final implementation.
 | Custom CNN Model 1          | 86%            | 85%           |
 | Custom CNN Model 2          | 90%            | 89%           |
 | Custom CNN Model 3          | 85%            | 83%           |
-|--------------------------------------------------------------|
 ## Application Setup
 
 ### Download the Best fitted model ~
