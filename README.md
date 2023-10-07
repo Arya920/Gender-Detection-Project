@@ -41,7 +41,7 @@ Given these results, the second model was selected for the final implementation.
 
 ### Download the Best fitted model ~
 
-[Click Here](hhttps://drive.google.com/file/d/1YhnwqgYIVEd92hvoZwwsxpq2qDEM65Q9/view?usp=drive_link)
+[Click Here](https://drive.google.com/file/d/1YhnwqgYIVEd92hvoZwwsxpq2qDEM65Q9/view?usp=sharing)
 
 ### Requirements
 - Python 3.x
